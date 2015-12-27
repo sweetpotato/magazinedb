@@ -1,0 +1,4 @@
+URL=http://www.dokidokivisual.com/magazine/carat/
+PREFIX=28-KCA
+SCRIPT1=./dokidokivisual1.pl
+SCRIPT2=./dokidokivisual2.pl

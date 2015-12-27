@@ -1,0 +1,4 @@
+URL=http://www.takeshobo.co.jp/magazine_d/zid/4
+PREFIX=04-CLU
+SCRIPT1=./takeshobo1.pl
+SCRIPT2=./takeshobo2.pl

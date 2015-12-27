@@ -1,0 +1,4 @@
+URL=http://www.manga-time.com/link/data/magazine_09.html
+PREFIX=27-TOR
+SCRIPT1=./mangatime1.pl
+SCRIPT2=./27tor2.pl
