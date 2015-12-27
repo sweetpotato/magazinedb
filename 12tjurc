@@ -1,4 +1,12 @@
 URL=http://www.manga-time.com/link/data/magazine_02.html
 PREFIX=12-TJU
-SCRIPT1=./mangatime1.pl
-SCRIPT2=./12tju2.pl
+SCRIPT1=( \
+  ./extract1.pl \
+  '(<table width="100%".*?</table>)' \
+)
+SCRIPT2=( \
+  ./extract2.pl \
+  ':encoding(euc-jp)' \
+  '"text_read">.*?"text_read"(>.*?<)/td>' \
+  '>\s*(\x{300C}.*?)\s*<' \
+)

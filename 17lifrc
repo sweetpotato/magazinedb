@@ -1,4 +1,3 @@
+source 00takeshoborc
 URL=http://www.takeshobo.co.jp/magazine_d/zid/6
 PREFIX=17-LIF
-SCRIPT1=./takeshobo1.pl
-SCRIPT2=./takeshobo2.pl

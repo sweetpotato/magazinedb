@@ -1,0 +1,10 @@
+SCRIPT1=( \
+  ./extract1.pl \
+  '<!-- Latest title -->\s*(.*?)\s*<!-- /Latest title/ -->' \
+)
+SCRIPT2=( \
+  ./extract2.pl \
+  ':encoding(cp932)' \
+  '<!-- Lineup -->(.*?)<!-- /Lineup -->' \
+  '<li>\s*(.*?)\s*</li>' \
+)

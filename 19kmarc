@@ -1,4 +1,10 @@
+source 00dokidokivisualrc
 URL=http://www.dokidokivisual.com/magazine/max/
 PREFIX=19-KMA
-SCRIPT1=./dokidokivisual1.pl
-SCRIPT2=./19kma2.pl
+unset SCRIPT2
+SCRIPT2=( \
+  ./extract2.pl \
+  ':encoding(cp932)' \
+  '<ul class="lineup">\s*(.*?\r\n)\s*<!-- /Lineup -->' \
+  '(.*?)\r\n' \
+)

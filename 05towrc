@@ -1,4 +1,12 @@
 URL=http://webaction.jp/manga_town/
 PREFIX=05-TOW
-SCRIPT1=./05tow1.pl
-SCRIPT2=./05tow2.pl
+SCRIPT1=( \
+  ./extract1.pl \
+  '(<section id="mag_pickup".*?</section>.*?</section>)' \
+)
+SCRIPT2=( \
+  ./extract2.pl \
+  ':utf8' \
+  '(<section id="mag_pickup".*?</section>)' \
+  '<h1 class="mag_pickup_title">\s*(.*?)\s*<[^>]*>\s*<[^>]*>\s*(.*?)\s*<' \
+)

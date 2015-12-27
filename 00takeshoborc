@@ -1,0 +1,10 @@
+SCRIPT1=( \
+  ./extract1.pl \
+  '<!-- AddClips Code END -->\s*(.*?)\s*</div>' \
+)
+SCRIPT2=( \
+  ./extract2.pl \
+  ':encoding(cp932)' \
+  '<ul class="disc mb30">(.*?)</ul>' \
+  '<li>\s*(.*?)\s*</li>' \
+)

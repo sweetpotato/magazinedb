@@ -1,4 +1,12 @@
 URL=http://www.manga-time.com/link/data/magazine_06.html
 PREFIX=17-TFA
-SCRIPT1=./mangatime1.pl
-SCRIPT2=./17tfa2.pl
+SCRIPT1=( \
+  ./extract1.pl \
+  '(<table width="100%".*?</table>)' \
+)
+SCRIPT2=( \
+  ./extract2.pl \
+  ':encoding(euc-jp)' \
+  '"text_read">.*?"text_read">\s*(.*?)\s*</td>' \
+  '\s*(.*?)\s*<BR>' \
+)
