@@ -1,0 +1,4 @@
+URL=http://www.takeshobo.co.jp/magazine_d/zid/7
+PREFIX=11-LOR
+SCRIPT1=./takeshobo1.pl
+SCRIPT2=./takeshobo2.pl

@@ -1,0 +1,4 @@
+URL=http://www.manga-time.com/link/data/magazine_06.html
+PREFIX=17-TFA
+SCRIPT1=./mangatime1.pl
+SCRIPT2=./17tfa2.pl

@@ -1,0 +1,4 @@
+URL=http://www.dokidokivisual.com/magazine/miracle/
+PREFIX=16-KMI
+SCRIPT1=./dokidokivisual1.pl
+SCRIPT2=./dokidokivisual2.pl

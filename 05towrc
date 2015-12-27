@@ -1,0 +1,4 @@
+URL=http://webaction.jp/manga_town/
+PREFIX=05-TOW
+SCRIPT1=./05tow1.pl
+SCRIPT2=./05tow2.pl

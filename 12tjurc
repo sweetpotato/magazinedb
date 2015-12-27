@@ -1,0 +1,4 @@
+URL=http://www.manga-time.com/link/data/magazine_02.html
+PREFIX=12-TJU
+SCRIPT1=./mangatime1.pl
+SCRIPT2=./12tju2.pl

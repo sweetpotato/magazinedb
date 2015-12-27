@@ -1,0 +1,4 @@
+URL=http://www.dokidokivisual.com/magazine/kirara/
+PREFIX=09-KIR
+SCRIPT1=./dokidokivisual1.pl
+SCRIPT2=./dokidokivisual2.pl

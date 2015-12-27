@@ -1,0 +1,4 @@
+URL=http://www.manga-time.com/link/data/magazine_07.html
+PREFIX=22-TSP
+SCRIPT1=./mangatime1.pl
+SCRIPT2=./22tsp2.pl

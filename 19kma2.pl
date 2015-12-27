@@ -6,9 +6,10 @@ binmode STDIN, ':encoding(cp932)';
 binmode STDOUT, ':utf8';
 local $/=undef;
 $_=<>;
-m|<!-- Lineup -->(.*?)<!-- /Lineup -->|s or die;
+### "\s*(.*?\r\n)\s*" to preserve the last CRLF
+m|<ul class="lineup">\s*(.*?\r\n)\s*<!-- /Lineup -->|s or die;
 $_=$1;
-while(m!<li>\s*(.*?)\s*</li>!gs) {
+while(m!(.*?)\r\n!g) {
   my $x=$1;
   # Remove HTML tags
   $x =~ s/<[^>]*>//g;

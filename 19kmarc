@@ -1,0 +1,4 @@
+URL=http://www.dokidokivisual.com/magazine/max/
+PREFIX=19-KMA
+SCRIPT1=./dokidokivisual1.pl
+SCRIPT2=./19kma2.pl
