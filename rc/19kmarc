@@ -1,4 +1,4 @@
-source 00dokidokivisualrc
+source "${0%/*}/rc/00dokidokivisualrc"
 URL=http://www.dokidokivisual.com/magazine/max/
 PREFIX=19-KMA
 unset SCRIPT2
