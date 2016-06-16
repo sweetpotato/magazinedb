@@ -27,10 +27,17 @@ while(<STDIN>) {
   my $result = {};
   for my $key (@$keys) {
     local $_ = shift @matched;
+    if(!defined($_)) {
+      next;
+    }
     s/^\s+|\s+$//g;
     # canonicalize:
     # - U+{2460,2461}: CIRCLED DIGIT {ONE,TWO}
     s/[\x{2460}\x{2461}]//g;
+    # - U+FF10-U+FF19: FULLWIDTH DIGIT ZERO-NINE
+    # - U+FF21-U+FF3A: FULLWIDTH LATIN CAPITAL LETTER A-Z
+    # - U+FF41-U+FF5A: FULLWIDTH LATIN SMALL LETTER A-Z
+    tr/\x{FF10}-\x{FF19}\x{FF21}-\x{FF3A}\x{FF41}-\x{FF5A}/0-9A-Za-z/;
     # - U+FF01: FULLWIDTH EXCLAMATION MARK
     if(index($_, '!') >= 0 && /[^\x{20}-\x{7E}]/) {
       s/!/\x{FF01}/g;
