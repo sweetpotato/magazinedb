@@ -2,11 +2,11 @@ URL=http://www.manga-time.com/link/data/magazine_01.html
 PREFIX=02-HOM
 SCRIPT1=( \
   ./extract1.pl \
-  '(<table width="100%".*?</table>)' \
+  '(<table width="100%".*?)<div class="clear">' \
 )
 SCRIPT2=( \
   ./extract2.pl \
   ':encoding(euc-jp)' \
-  '"text_read">.*?"text_read"(>.*?<)/td>' \
-  '>\s*(\x{300C}.*?)\s*<' \
+  '"text_read">.*?"text_read">\s*(.*?)\s*</td>' \
+  '(.*?)<BR>' \
 )
