@@ -39,8 +39,11 @@ while(<STDIN>) {
     # - U+FF41-U+FF5A: FULLWIDTH LATIN SMALL LETTER A-Z
     tr/\x{FF10}-\x{FF19}\x{FF21}-\x{FF3A}\x{FF41}-\x{FF5A}/0-9A-Za-z/;
     # - U+FF01: FULLWIDTH EXCLAMATION MARK
-    if(index($_, '!') >= 0 && /[^\x{20}-\x{7E}]/) {
-      s/!/\x{FF01}/g;
+    # - U+FF1F: QUESTION EXCLAMATION MARK
+    if(/[^\x{20}-\x{7E}]/) {
+      # ignore "!?"
+      s/!(?!\?)/\x{FF01}/g;
+      s/(?<!!)\?/\x{FF1F}/g;
     }
 
     $result->{$key} = $_;
