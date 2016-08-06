@@ -7,7 +7,7 @@ prefix="$1"
 index="${2:-0}"
 
 myvars="MyVars/$prefix.pm"
-master="$prefix-master.tsv"
+master="master/$prefix.tsv"
 
 [ -f "$myvars" ]
 [ -f "$master" ]
