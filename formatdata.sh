@@ -8,7 +8,6 @@ index="${2:-0}"
 
 myvars="MyVars/$prefix.pm"
 master="master/$prefix.tsv"
-
 [ -f "$myvars" ]
 [ -f "$master" ]
 

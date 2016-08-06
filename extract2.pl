@@ -4,17 +4,17 @@ use warnings;
 use utf8;
 
 (@ARGV == 3) or die;
-my($e, $p, $q) = @ARGV;
+my($encode, $pattern, $qattern) = @ARGV;
 
-binmode STDIN, $e;
+binmode STDIN, $encode;
 binmode STDOUT, ':utf8';
 local $/ = undef;
 
 local $_ = <STDIN>;
-/$p/s or die;
+/$pattern/s or die;
 local $_ = $1;
 
-while(/$q/gs) {
+while(/$qattern/gs) {
   my $x = (defined($2)) ? "$1$2" : $1;
   # Remove HTML tags
   $x =~ s/<[^>]*>//g;
