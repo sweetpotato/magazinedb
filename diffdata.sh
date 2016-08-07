@@ -5,7 +5,8 @@ set -xueo pipefail
 prefix="$1"
 index="${2:-0}"
 
-find data -mindepth 1 -maxdepth 1 -name "$prefix-*" | sort -r |\
-  head -n "$((index+2))" | tail -n 2 |\
-  xargs -n 2 bash -c 'diff -u <(sort "$1") <(sort "$0")' |\
+targets=( $(find data -mindepth 1 -maxdepth 1 -name "$prefix-*" |\
+            sort -r | head -n "$((index+2))" | tail -n 2) )
+
+diff -u <(sort "${targets[1]}") <(sort "${targets[0]}") |\
   grep -E '^[-+]' | grep -vE '^[-+]{3}'
