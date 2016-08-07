@@ -32,6 +32,8 @@ function fetchpage() {
   fi
 }
 
+# main
+
 htmlfile=$(fetchpage)
 
 mkdir -p data

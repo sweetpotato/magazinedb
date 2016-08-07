@@ -2,7 +2,6 @@
 export LANG=C LC_ALL=C
 set -xueo pipefail
 
-[ -n "$1" ]
 prefix="$1"
 index="${2:-0}"
 
