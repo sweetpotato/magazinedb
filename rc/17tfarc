@@ -1,9 +1,6 @@
+source "${0%/*}/rc/00mangatimerc"
 URL=http://www.manga-time.com/link/data/magazine_06.html
 PREFIX=17-TFA
-SCRIPT1=( \
-  ./extract1.pl \
-  '<div id="content">(.*?)<div class="clear">' \
-)
 SCRIPT2=( \
   ./extract2.pl \
   ':encoding(euc-jp)' \

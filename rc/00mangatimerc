@@ -1,0 +1,4 @@
+SCRIPT1=( \
+  ./extract1.pl \
+  '<div id="content">(.*?)<div class="clear">' \
+)
