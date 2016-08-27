@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/bash -x
 export LANG=C LC_ALL=C
-set -xueo pipefail
+set -ueo pipefail
 
 prefix="$1"
 index="${2:-0}"

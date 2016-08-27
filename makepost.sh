@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/bash -x
 export LANG=C LC_ALL=C
-set -xueo pipefail
+set -ueo pipefail
 
 "${0%/*}"/formatdata.sh "$@" |\
   grep -E '(ゲスト連載|休載|FIXME)$' |\

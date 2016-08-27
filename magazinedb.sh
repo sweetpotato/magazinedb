@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/bin/bash -x
 export LANG=C LC_ALL=C
-set -xueo pipefail
+set -ueo pipefail
 
 source "$1"
 [ -n "$URL" ]
