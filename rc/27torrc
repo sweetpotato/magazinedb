@@ -5,5 +5,5 @@ SCRIPT2=( \
   ./extract2.pl \
   ':encoding(euc-jp)' \
   '"text_read">.*?"text_read"(>.*?<)/td>' \
-  '>\s*[0-9]+(.*?)\s*<' \
+  '>\s*(.*?)\s*<' \
 )
